@@ -1,0 +1,230 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0a0a0a;
+  color: #e0e8ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Главный экран выбора трека */
+.track-select {
+  text-align: center;
+  width: 100%;
+}
+
+.track-select h1 {
+  color: #0af;
+  margin-bottom: 20px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 10px;     
+}
+
+.track-card {
+  background-color: #1b2b3b;
+  border-radius: 12px;
+  width: 180px;
+  cursor: pointer;
+  transition: 0.2s;
+  padding: 10px;
+}
+
+.track-card:hover {
+  background-color: #0a84ff;
+}
+
+.track-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.track-card h3 {
+  margin: 10px 0 0;
+  font-size: 1.1em;
+}
+
+.track-card p {
+  margin: 4px 0 10px;
+  font-size: 0.9em;
+  color: #b0caff;
+}
+
+/* Плеер */
+.player-section {
+  width: 800px;
+  max-width: 95%;
+  background-color: #101820;
+  border-radius: 16px;
+  box-shadow: 0 0 20px #0af;
+  padding: 20px;
+  text-align: center;
+}
+
+.back-btn {
+  background-color: #1b2b3b;
+  border: 1px solid #0af;
+  color: #0af;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-bottom: 15px;
+}
+
+.back-btn:hover {
+  background-color: #0a84ff;
+  color: white;
+}
+
+.player-container {
+  display: flex;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.track-list {
+  width: 40%;
+  border-right: 2px solid #0af;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.track-list.hidden {
+  width: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+}
+
+.track-list h2 {
+  color: #0af;
+  text-align: center;
+}
+
+.track-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.track-list li {
+  background-color: #1b2b3b;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.track-list li:hover {
+  background-color: #0a84ff;
+}
+
+.text-list {
+  width: 40%;
+  border-left: 2px solid #0af;
+  padding: 20px;
+  transition: all 0.3s ease;
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+.text-list.hidden {
+  width: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+}
+
+.player {
+  width: 60%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.player.full-width {
+  width: 100%;
+}
+
+.obl {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 0 10px #0af;
+}
+
+.controls {
+  margin: 15px 0;
+}
+
+.controls button {
+  background-color: #0a84ff;
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.controls button:hover {
+  background-color: #0070e0;
+}
+
+.volume {
+  margin-top: 10px;
+}
+
+#volumeControl {
+  width: 150px;
+}
+
+.shuffle {
+  margin-top: 15px;
+  background-color: #0af;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.shuffle:hover {
+  background-color: #0070e0;
+}
+
+.toggle-list {
+  background-color: #1b2b3b;
+  border: 1px solid #0af;
+  color: #0af;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-bottom: 15px;
+}
+
+.toggle-list:hover {
+  background-color: #0a84ff;
+  color: white;
+}
