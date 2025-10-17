@@ -43,6 +43,7 @@ const audio = document.getElementById("audio");
 const volumeControl = document.getElementById("volumeControl");
 const textBtn = document.getElementById("text");
 const textListContainer = document.getElementById("textListContainer");
+const downloadBtn = document.getElementById("downloadBtn");
 
 
 let Index = 0;
@@ -88,6 +89,8 @@ function loadTrack(index) {
   obl.src = track.cover;
   titleEl.textContent = track.title;
   artistEl.textContent = track.artist;
+  downloadBtn.href = track.audio;
+  downloadBtn.download = track.title + ".mp3";
 }
 
 playPauseBtn.addEventListener("click", () => {
@@ -152,14 +155,12 @@ shuffleBtn.addEventListener("click", () => {
   textListContainer.classList.add("hidden");
 });
 
-async function loadTrackText(trackIndex) {
+ function loadTrackText(trackIndex) {
   const track = tracks[trackIndex];
-  if (!track.textFile) return;
-  const response = await fetch(track.textFile);
-  if (!response.ok) throw new Error("Ошибка загрузки текста");
-  const text = await response.text();
   textListContainer.innerHTML = `<h2>Текст: ${track.title}</h2><pre>${text}</pre>`;
   textListContainer.classList.remove("hidden");
+  
+
 }
 
 textBtn.addEventListener("click", () => {

@@ -162,6 +162,21 @@ body {
   width: 100%;
 }
 
+.download {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #0af;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.download:hover {
+  background-color: #0070e0;
+}
+
 .obl {
   width: 200px;
   height: 200px;
