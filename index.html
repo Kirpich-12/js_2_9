@@ -3,53 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Музыкальный выбор</title>
+  <title>Музыкальные плееры</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="trackSelectSection" class="track-select">
-    <h1>Выберите трек</h1>
-    <div id="trackGallery" class="gallery"></div>
-  </div>
-
-  <div id="playerSection" class="player-section hidden">
-    <button id="backToSelect" class="back-btn">Назад</button>
-
-    <div class="player-container" id="playerContainer">
-      <div class="track-list hidden" id="trackListContainer">
-        <h2>Список треков</h2>
-        <ul id="trackList"></ul>
-      </div>
-
-      <div class="player full-width" id="player">
-        <button id="toggleListBtn" class="toggle-list">Показать / Скрыть список</button>
-
-        <img id="obl" src="" alt="Обложка трека" class="obl" />
-        <h3 id="title">Выберите трек</h3>
-        <p id="artist"></p>
-
-        <div class="controls">
-          <button id="prevBtn">⏮</button>
-          <button id="playPauseBtn">▶</button>
-          <button id="nextBtn">⏭</button>
-          <button id="text">📚</button>
-        </div>
-
-        <div class="volume">
-          <label for="volumeControl">🔊</label>
-          <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1" />
-        </div>
-
-        <button id="shuffleBtn" class="shuffle">Перемешать</button>
-        <a id="downloadBtn" class="download" href="" download>⬇ Скачать</a>
-      </div>
-
-      <div class="text-list hidden" id="textListContainer"></div>
-    </div>
-
-    <audio id="audio"></audio>
-  </div>
-
-  <script src="script.js"></script>
+  <div id="app"></div>
+  <script src="class.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@ const tracks = [
     artist: "Иван Золо",
     cover: "assets/krt1.jpg",
     audio: "songs/duhast.mp3",
-    textFile: "texts/tet.txt"
+    textFile: "sadasdasd"
   },
   {
     title: "Песня 2",
@@ -157,7 +157,7 @@ shuffleBtn.addEventListener("click", () => {
 
  function loadTrackText(trackIndex) {
   const track = tracks[trackIndex];
-  textListContainer.innerHTML = `<h2>Текст: ${track.title}</h2><pre>${text}</pre>`;
+  textListContainer.innerHTML = `<h2>Текст: ${track.title}</h2><pre>${track.textFile}</pre>`;
   textListContainer.classList.remove("hidden");
   
 
