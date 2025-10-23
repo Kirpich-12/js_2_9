@@ -31,6 +31,7 @@ class Player {
               <button class="play-pause">▶</button>
               <button class="next">⏭</button>
               <button class="text-btn">📚</button>
+              <button class="new-player">Add new player</button>
             </div>
 
             <div class="volume">
@@ -66,6 +67,7 @@ class Player {
     this.listContainer = this.container.querySelector(".track-list");
     this.toggleListBtn = this.container.querySelector(".toggle-list");
     this.list = this.container.querySelector("ul");
+    this.addBtn = this.container.querySelector(".new-player")
   }
 
   init() {
@@ -156,7 +158,7 @@ class Player {
 
 
 
-const tracksA = [
+const track = [
   {
     title: "Бабобаб",
     artist: "Иван Золо",
@@ -173,7 +175,7 @@ const tracksA = [
   }
 ];
 
-const tracksB = [
+const track2 = [
   {
     title: "Трек 1",
     artist: "Артист B1",
@@ -192,14 +194,14 @@ const tracksB = [
 
 document.addEventListener("DOMContentLoaded", () => {
   const app = document.getElementById("app");
-
   const player1Container = document.createElement("div");
-  const player2Container = document.createElement("div");
-
   app.appendChild(player1Container);
-  app.appendChild(player2Container);
-  app.appendChild(player2)
-
-  const player1 = new Player(player1Container, tracksA);
-  const player2 = new Player(player2Container, tracksB);
+  const player1 = new Player(player1Container, track);
 });
+
+
+function addNewPlayer(){
+  const playerContainer = document.createElement("div");
+  app.appendChild(playerContainer);
+  const player2 = new Player(playerContainer, track)
+}
