@@ -79,6 +79,7 @@ class Player {
     this.volumeControl.addEventListener("input", () => this.changeVolume());
     this.textBtn.addEventListener("click", () => this.toggleText());
     this.toggleListBtn.addEventListener("click", () => this.toggleList());
+    this.addBtn.addEventListener("click", () => this.addNewPlayer());
   }
 
   loadList() {
@@ -105,6 +106,15 @@ class Player {
     this.audio.src = track.audio;
     this.downloadBtn.href = track.audio;
     this.downloadBtn.download = track.title + ".mp3";
+  }
+
+  addNewPlayer() {
+    const app = document.getElementById("app");
+    const newContainer = document.createElement("div");
+    app.appendChild(newContainer);
+
+    // Можно передать другие треки, например track2
+    const newPlayer = new Player(newContainer, this.tracks);
   }
 
   playPause() {
@@ -203,5 +213,6 @@ document.addEventListener("DOMContentLoaded", () => {
 function addNewPlayer(){
   const playerContainer = document.createElement("div");
   app.appendChild(playerContainer);
-  const player2 = new Player(playerContainer, track)
+  const player2 = new Player(playerContainer, track);
 }
+
